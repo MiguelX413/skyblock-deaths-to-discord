@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 import logging
 import time
-from typing import List
+from typing import List, Sequence
 
 import requests
 from discord_webhook import DiscordWebhook
 
 
-def connect_sub_clauses(sub_clauses: List[str]) -> str:
+def connect_sub_clauses(sub_clauses: Sequence[str]) -> str:
     if len(sub_clauses) == 0:
         return ""
     elif len(sub_clauses) == 1:
