@@ -15,14 +15,7 @@ def connect_sub_clauses(sub_clauses: List[str]) -> str:
     elif len(sub_clauses) == 2:
         return f"{sub_clauses[0]} and {sub_clauses[1]}"
     else:
-        sub_strings = []
-        for counter, sub_string in enumerate(sub_clauses):
-            sub_strings.append(sub_string)
-            if counter < len(sub_clauses) - 2:
-                sub_strings.append(", ")
-            elif counter == len(sub_clauses) - 2:
-                sub_strings.append(", and ")
-        return "".join(sub_strings)
+        return f"{', '.join(sub_clauses[:-1])}, and {sub_clauses[-1]}"
 
 
 def send_message(
